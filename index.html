@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="">
     <title>테스트 웹뷰</title>
     <script type="text/javascript">
+
+
+        
         window.onload = function(){
             document.getElementById('send').onclick = function(e){
 
@@ -28,10 +31,14 @@
             }
         }
 
+
         // js 에서 ios 호출할 메소드
         function jsToNativeEventCallTokenKey() {
             // console.log('jsToNativeEventCall : $message');
             let messageToSend = document.getElementById("messageToSend")
+            const person = {
+            url: ,
+            intent: true };
             const sendData = { message: messageToSend.value };
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
@@ -180,7 +187,7 @@
 
         <h2 class="">상품상세이동 요청</h2>
         <input type="text" placeholder="전달할 내용을 입력하세요" name="messageToSend6" id="messageToSend6" />
-        <button onclick="jsToNativeEventCallHamberger();">네이티브로 전달</button>
+        <button onclick="jsToNativeEventCallProductDetail();">네이티브로 전달</button>
 
         <h2 class="">스토리상세이동 요청</h2>
         <input type="text" placeholder="전달할 내용을 입력하세요" name="messageToSend7" id="messageToSend7" />
