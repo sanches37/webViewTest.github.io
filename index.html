@@ -33,13 +33,13 @@
             // console.log('jsToNativeEventCall : $message');
             let messageToSend = document.getElementById("messageToSend")
             const person = {
-            url: 'https://service-devel.linkey.io/shops/54',
+            url: 'https://service-devel.linkey.io/tokenKey',
             intent: true };
             const sendData = { message: messageToSend.value };
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.tokenKeyHandler.postMessage(person);
+                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -56,11 +56,14 @@
         function jsToNativeEventCallHamberger() {
             // console.log('jsToNativeEventCall : $message');
             let messageToSend = document.getElementById("messageToSend2")
+            const person = {
+            url: 'https://service-devel.linkey.io/my-shopping',
+            intent: true };
             const sendData = { message: messageToSend.value };
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.hambergerHandler.postMessage(sendData);
+                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -70,11 +73,14 @@
         function jsToNativeEventCallShoppingBasket() {
             // console.log('jsToNativeEventCall : $message');
             let messageToSend = document.getElementById("messageToSend3")
+            const person = {
+            url: 'https://service-devel.linkey.io/carts',
+            intent: true };
             const sendData = { message: messageToSend.value };
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.shoppingBasketHandler.postMessage(sendData);
+                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -84,11 +90,14 @@
         function jsToNativeEventCallPromotion() {
             // console.log('jsToNativeEventCall : $message');
             let messageToSend = document.getElementById("messageToSend4")
+            const person = {
+            url: 'https://service-devel.linkey.io/promotion',
+            intent: true };
             const sendData = { message: messageToSend.value };
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.promotionHandler.postMessage(sendData);
+                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -98,11 +107,14 @@
         function jsToNativeEventCallStoreHome() {
             // console.log('jsToNativeEventCall : $message');
             let messageToSend = document.getElementById("messageToSend5")
+            const person = {
+            url: 'https://service-devel.linkey.io/shops/54',
+            intent: true };
             const sendData = { message: messageToSend.value };
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.storeHomeHandler.postMessage(sendData);
+                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -112,11 +124,14 @@
         function jsToNativeEventCallProductDetail() {
             // console.log('jsToNativeEventCall : $message');
             let messageToSend = document.getElementById("messageToSend6")
+            const person = {
+            url: 'https://service-devel.linkey.io/shops/36/products/500',
+            intent: true };
             const sendData = { message: messageToSend.value };
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.productDetailHomeHandler.postMessage(sendData);
+                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -126,11 +141,14 @@
         function jsToNativeEventCallStoryDetail() {
             // console.log('jsToNativeEventCall : $message');
             let messageToSend = document.getElementById("messageToSend7")
+            const person = {
+            url: 'https://service-devel.linkey.io/shops/54/stories/294',
+            intent: true };
             const sendData = { message: messageToSend.value };
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.storyDetailHomeHandler.postMessage(sendData);
+                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -140,11 +158,14 @@
         function jsToNativeEventCallEventDetail() {
             // console.log('jsToNativeEventCall : $message');
             let messageToSend = document.getElementById("messageToSend8")
+            const person = {
+            url: 'https://service-devel.linkey.io/shops/54',
+            intent: true };
             const sendData = { message: messageToSend.value };
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.eventDetailHomeHandler.postMessage(sendData);
+                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
