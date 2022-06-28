@@ -206,6 +206,40 @@
             }
         }
 
+        function jsToNativeEventCallStoryReport() {
+            // console.log('jsToNativeEventCall : $message');
+            let messageToSend = document.getElementById("messageToSend9")
+            const person = {
+            url: 'https://service-devel.linkey.io/report/shops/54/story/294',
+            intent: true };
+            const sendData = { message: messageToSend.value };
+            // const sendData = { message: "messageToSend"};
+            // callbackHandler 가 브릿지 이름 
+            try{
+                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
+                messageToSend.value = "";
+            } catch (err) {
+                alert(err);
+            }
+        }
+
+        function jsToNativeEventCallProductReport() {
+            // console.log('jsToNativeEventCall : $message');
+            let messageToSend = document.getElementById("messageToSend9")
+            const person = {
+            url: 'https://service-devel.linkey.io/report/shops/36/product/500',
+            intent: true };
+            const sendData = { message: messageToSend.value };
+            // const sendData = { message: "messageToSend"};
+            // callbackHandler 가 브릿지 이름 
+            try{
+                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
+                messageToSend.value = "";
+            } catch (err) {
+                alert(err);
+            }
+        }
+
     </script>
 </head>
 
@@ -255,6 +289,14 @@
         <h2 class="">상품댓글이동 요청</h2>
         <input type="text" placeholder="전달할 내용을 입력하세요" name="messageToSend10" id="messageToSend10" />
         <button onclick="jsToNativeEventCallProductComment();">네이티브로 전달</button>
+
+        <h2 class="">스토리신고 요청</h2>
+        <input type="text" placeholder="전달할 내용을 입력하세요" name="messageToSend11" id="messageToSend11" />
+        <button onclick="jsToNativeEventCallStoryReport();">네이티브로 전달</button>
+
+        <h2 class="">상품신고 요청</h2>
+        <input type="text" placeholder="전달할 내용을 입력하세요" name="messageToSend12" id="messageToSend12" />
+        <button onclick="jsToNativeEventCallProductReport();">네이티브로 전달</button>
        
     </div>
 </body>
