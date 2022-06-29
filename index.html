@@ -240,6 +240,23 @@
             }
         }
 
+        function jsToNativeEventCallMagazine() {
+            // console.log('jsToNativeEventCall : $message');
+            let messageToSend = document.getElementById("messageToSend10")
+            const person = {
+            url: 'https://google.com',
+            intent: true };
+            const sendData = { message: messageToSend.value };
+            // const sendData = { message: "messageToSend"};
+            // callbackHandler 가 브릿지 이름 
+            try{
+                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
+                messageToSend.value = "";
+            } catch (err) {
+                alert(err);
+            }
+        }
+
     </script>
 </head>
 
@@ -297,6 +314,10 @@
         <h2 class="">상품신고 요청</h2>
         <input type="text" placeholder="전달할 내용을 입력하세요" name="messageToSend12" id="messageToSend12" />
         <button onclick="jsToNativeEventCallProductReport();">네이티브로 전달</button>
+
+        <h2 class="">매거진상세 요청</h2>
+        <input type="text" placeholder="전달할 내용을 입력하세요" name="messageToSend13" id="messageToSend13" />
+        <button onclick="jsToNativeEventCallMagazine();">네이티브로 전달</button>
        
     </div>
 </body>
