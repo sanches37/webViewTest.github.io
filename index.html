@@ -46,12 +46,16 @@
             }
         }
 
-                // 네이티브 에서 호출할 메소드
-        function nativeToJsEventCallTokenKey(message){
-            // console.log('nativeToJsEventCall : $message');
-            let nativeInput = document.getElementById("native_input")
-            nativeInput.value = message;
+        const webview = {
+        // 네이티브 에서 호출할 메소드
+            nativeToJsEventCallTokenKey(message) {
+                // console.log('nativeToJsEventCall : $message');
+                let nativeInput = document.getElementById("native_input")
+                nativeInput.value = message;
+            }
         }
+
+        
 
         function jsToNativeEventCallHamberger() {
             // console.log('jsToNativeEventCall : $message');
