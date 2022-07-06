@@ -288,10 +288,19 @@
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
+                window.webkit.messageHandlers.nearShopHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
+            }
+        }
+
+        const nearShopView = {
+        // 네이티브 에서 호출할 메소드
+            nativeToJsEventCallNearShopView(message) {
+                // console.log('nativeToJsEventCall : $message');
+                let nativeInput = document.getElementById("near_input")
+                nativeInput.value = message;
             }
         }
 
@@ -381,6 +390,10 @@
         <h2 class="">가까운상점 요청</h2>
         <input type="text" placeholder="전달할 내용을 입력하세요" name="messageToSend15" id="messageToSend15" />
         <button onclick="jsToNativeEventCallNearShop();">네이티브로 전달</button>
+
+        <h2 class="">전달받은 위도, 경도</h2>
+        <input name="near_input" id="near_input" value="" />
+        <p></p>
 
         <h2 class="">단골 요청</h2>
         <input type="text" placeholder="전달할 내용을 입력하세요" name="messageToSend16" id="messageToSend16" />
