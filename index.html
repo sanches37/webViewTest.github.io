@@ -33,13 +33,13 @@
             // console.log('jsToNativeEventCall : $message');
             let messageToSend = document.getElementById("messageToSend")
             const person = {
-            url: 'https://service-devel.linkey.io/tokenKey',
+            token: 'token',
             intent: true };
             const sendData = { message: messageToSend.value };
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
+                window.webkit.messageHandlers.tokenHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -67,7 +67,7 @@
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
+                window.webkit.messageHandlers.urlHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -84,7 +84,7 @@
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
+                window.webkit.messageHandlers.urlHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -101,7 +101,7 @@
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
+                window.webkit.messageHandlers.urlHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -135,7 +135,7 @@
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
+                window.webkit.messageHandlers.urlHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -152,7 +152,7 @@
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
+                window.webkit.messageHandlers.urlHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -169,7 +169,7 @@
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
+                window.webkit.messageHandlers.urlHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -186,7 +186,7 @@
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
+                window.webkit.messageHandlers.urlHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -203,7 +203,7 @@
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
+                window.webkit.messageHandlers.urlHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -220,7 +220,7 @@
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
+                window.webkit.messageHandlers.urlHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -237,7 +237,7 @@
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
+                window.webkit.messageHandlers.urlHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -254,7 +254,7 @@
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
+                window.webkit.messageHandlers.urlHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -271,7 +271,7 @@
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
+                window.webkit.messageHandlers.urlHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -283,12 +283,14 @@
             let messageToSend = document.getElementById("messageToSend15")
             const person = {
             url: 'https://service-devel.linkey.io/nearShop/1',
-            intent: true };
+            internal: true,
+            title: "가까운 상점"
+         };
             const sendData = { message: messageToSend.value };
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.nearShopHandler.postMessage(person);
+                window.webkit.messageHandlers.locationHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -314,7 +316,7 @@
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.linkeyHandler.postMessage(person);
+                window.webkit.messageHandlers.urlHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
@@ -397,6 +399,10 @@
 
         <h2 class="">단골 요청</h2>
         <input type="text" placeholder="전달할 내용을 입력하세요" name="messageToSend16" id="messageToSend16" />
+        <button onclick="jsToNativeEventCallDangol();">네이티브로 전달</button>
+
+        <h2 class="">위치 요청</h2>
+        <input type="text" placeholder="전달할 내용을 입력하세요" name="messageToSend17" id="messageToSend17" />
         <button onclick="jsToNativeEventCallDangol();">네이티브로 전달</button>
        
     </div>
