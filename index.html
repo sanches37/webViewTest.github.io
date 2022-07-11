@@ -46,9 +46,9 @@
             }
         }
 
-        const webview = {
+        const window = {
         // 네이티브 에서 호출할 메소드
-            nativeToJsEventCallTokenKey(message) {
+        setToken(message) {
                 // console.log('nativeToJsEventCall : $message');
                 let nativeInput = document.getElementById("native_input")
                 nativeInput.value = message;
@@ -297,9 +297,9 @@
             }
         }
 
-        const nearShopView = {
+        const window2 = {
         // 네이티브 에서 호출할 메소드
-            nativeToJsEventCallNearShopView(message) {
+        setLocation(message) {
                 // console.log('nativeToJsEventCall : $message');
                 let nativeInput = document.getElementById("near_input")
                 nativeInput.value = message;
