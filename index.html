@@ -323,6 +323,23 @@
             }
         }
 
+        function jsToNativeEventCallLocation() {
+            // console.log('jsToNativeEventCall : $message');
+            let messageToSend = document.getElementById("messageToSend17")
+            const person = {
+            url: 'https://service-devel.linkey.io/location/36',
+            intent: true };
+            const sendData = { message: messageToSend.value };
+            // const sendData = { message: "messageToSend"};
+            // callbackHandler 가 브릿지 이름 
+            try{
+                window.webkit.messageHandlers.urlHandler.postMessage(person);
+                messageToSend.value = "";
+            } catch (err) {
+                alert(err);
+            }
+        }
+
     </script>
 </head>
 
@@ -403,7 +420,7 @@
 
         <h2 class="">위치 요청</h2>
         <input type="text" placeholder="전달할 내용을 입력하세요" name="messageToSend17" id="messageToSend17" />
-        <button onclick="jsToNativeEventCallDangol();">네이티브로 전달</button>
+        <button onclick="jsToNativeEventCallLocation();">네이티브로 전달</button>
        
     </div>
 </body>
