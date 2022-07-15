@@ -297,15 +297,6 @@
             }
         }
 
-        const ddd = {
-        // 네이티브 에서 호출할 메소드
-        setLocation(message) {
-                // console.log('nativeToJsEventCall : $message');
-                let nativeInput = document.getElementById("near_input")
-                nativeInput.value = message;
-            }
-        }
-
         function jsToNativeEventCallDangol() {
             // console.log('jsToNativeEventCall : $message');
             let messageToSend = document.getElementById("messageToSend16")
@@ -337,6 +328,15 @@
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
+            }
+        }
+
+        const ddd = {
+        // 네이티브 에서 호출할 메소드
+        setLocation(message) {
+                // console.log('nativeToJsEventCall : $message');
+                let locationInput = document.getElementById("location_input")
+                nativeInput.value = message;
             }
         }
 
@@ -421,6 +421,10 @@
         <h2 class="">위치 요청</h2>
         <input type="text" placeholder="전달할 내용을 입력하세요" name="messageToSend17" id="messageToSend17" />
         <button onclick="jsToNativeEventCallLocation();">네이티브로 전달</button>
+
+        <h2 class="">전달받은 location</h2>
+        <input name="location_input" id="location_input" value="" />
+        <p></p>
        
     </div>
 </body>
