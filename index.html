@@ -333,7 +333,7 @@
             // const sendData = { message: "messageToSend"};
             // callbackHandler 가 브릿지 이름 
             try{
-                window.webkit.messageHandlers.urlHandler.postMessage(person);
+                window.webkit.messageHandlers.internalHandler.postMessage(person);
                 messageToSend.value = "";
             } catch (err) {
                 alert(err);
